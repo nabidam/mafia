@@ -7,16 +7,25 @@ import {
   CardContent,
   CardFooter,
 } from "../ui/card";
+import { cn } from "@/lib/utils";
 
-const CardWithIcon = ({ img, title }: { img: string; title: string }) => {
+const CardWithIcon = ({
+  img,
+  title,
+  className,
+}: {
+  img: string;
+  title: string;
+  className?: string;
+}) => {
   return (
-    <Card className="cursor-pointer card">
+    <Card className={cn("cursor-pointer card w-[150px] sm:w-full", className)}>
       <div className="flex items-center justify-center mt-4">
         <Image src={img} alt="mafia" width="64" height="64" />
       </div>
 
       <CardHeader>
-        <CardTitle>{title}</CardTitle>
+        <CardTitle className="text-center">{title}</CardTitle>
       </CardHeader>
     </Card>
   );

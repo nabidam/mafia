@@ -1,6 +1,8 @@
 const CenteredBox = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className="flex items-center justify-center h-full">{children}</div>
+    <div className="flex flex-col items-center justify-center h-full gap-4 flex-wrap">
+      {children}
+    </div>
   );
 };
 
