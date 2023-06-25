@@ -1,24 +1,12 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import CardWithIcon from "@/components/cards/CardWithIcon";
+import CenteredBox from "@/components/layout/CenteredBox";
 
 export default function Home() {
-  return <div>
-    <Card>
-      <CardHeader>
-        <CardTitle>بازی‌های من</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <p>Card Content</p>
-      </CardContent>
-      <CardFooter>
-        <p>بازی‌های من</p>
-      </CardFooter>
-    </Card></div>
-    ;
+  return (
+    <div className="container mx-auto h-screen">
+      <CenteredBox>
+        <CardWithIcon img="/mafia.png" title="بازی جدید" />
+      </CenteredBox>
+    </div>
+  );
 }

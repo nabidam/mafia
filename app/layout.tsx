@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@/components/theme-provider"
 import localFont from 'next/font/local'
 import { Metadata } from "next";
+import './globals.css'
 
 
 const APP_NAME = "App name";
