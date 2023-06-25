@@ -12,12 +12,7 @@ const CardWithIcon = ({
   className?: string;
 }) => {
   return (
-    <Card
-      className={cn(
-        "cursor-pointer with-shadow w-[150px] sm:w-full",
-        className
-      )}
-    >
+    <Card className={cn("cursor-pointer card w-[150px] sm:w-full", className)}>
       <div className="flex items-center justify-center mt-4">
         <Image src={img} alt="mafia" width="64" height="64" />
       </div>

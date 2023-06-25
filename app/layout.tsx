@@ -1,13 +1,10 @@
-import { ThemeProvider } from "@/components/theme-provider"
-import localFont from 'next/font/local'
+import { ThemeProvider } from "@/components/theme-provider";
+import localFont from "next/font/local";
 import { Metadata } from "next";
-import './globals.css'
-
+import "./globals.css";
 
 const APP_NAME = "App name";
 const APP_DESCRIPTION = "App Description";
-
-
 
 export const metadata: Metadata = {
   title: "App",
@@ -30,9 +27,7 @@ export const metadata: Metadata = {
   viewport:
     "minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover",
   manifest: "/manifest.json",
-  icons: [
-    { rel: "shortcut icon", url: "/favicon.ico" },
-  ],
+  icons: [{ rel: "shortcut icon", url: "/favicon.ico" }],
   keywords: ["nextjs", "pwa", "next-pwa"],
 };
 
@@ -44,44 +39,44 @@ export const Vazir = localFont({
     //   style: 'normal',
     // },
     {
-      path: '../public/fonts/Vazir-Thin-FD-WOL.woff2',
-      weight: '100',
-      style: 'italic',
+      path: "../public/fonts/Vazir-Thin-FD-WOL.woff2",
+      weight: "100",
+      style: "italic",
     },
     {
-      path: '../public/fonts/Vazir-Light-FD-WOL.woff2',
-      weight: '300',
-      style: 'normal',
+      path: "../public/fonts/Vazir-Light-FD-WOL.woff2",
+      weight: "300",
+      style: "normal",
     },
     {
-      path: '../public/fonts/Vazir-Medium-FD-WOL.woff2',
-      weight: '500',
-      style: 'italic',
+      path: "../public/fonts/Vazir-Medium-FD-WOL.woff2",
+      weight: "500",
+      style: "italic",
     },
     {
-      path: '../public/fonts/Vazir-Bold-FD-WOL.woff2',
-      weight: '700',
-      style: 'normal',
+      path: "../public/fonts/Vazir-Bold-FD-WOL.woff2",
+      weight: "700",
+      style: "normal",
     },
   ],
-  variable: '--font-vazir',
-})
+  variable: "--font-vazir",
+});
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <>
-      <html lang="fa" dir='rtl' suppressHydrationWarning>
+      <html lang="fa" dir="rtl" suppressHydrationWarning>
         <head />
         <body className={Vazir.className}>
           <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            {children}
+            <div className="container mx-auto h-screen">{children}</div>
           </ThemeProvider>
         </body>
       </html>
     </>
-  )
+  );
 }
